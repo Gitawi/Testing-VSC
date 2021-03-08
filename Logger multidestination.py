@@ -35,6 +35,11 @@ fh.setFormatter(formatter1f)
 fh.setLevel(logging.DEBUG)
 loggerf.addHandler(fh)
 
+
+
+
+
+
 # console-logger
 # gggggggg ändring
 loggerc = logging.getLogger(__name__+' console')
