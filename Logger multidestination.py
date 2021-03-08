@@ -15,6 +15,8 @@ Logs to different destinations, individually or multidestination
 # Create Message Formatters to be used below with different output-handlers
 # 3 alternative string formatting styles tested. I preferred '{' i.e. formatting no 1
 # 1c,1f,1s a little different - to be used for different destinations = outputhandlers = handlers i.e.for console, file, SQLite db
+
+
 formatter1f = logging.Formatter('{asctime}/{name}/{lineno:0=3}/{levelname:9}{message}', datefmt='%y%m%d/%H:%M:%S', style='{')
 formatter1c = logging.Formatter('{asctime}/{name}/{lineno:0=3}/{levelname:9}{message}', datefmt='%H:%M:%S', style='{')
 formatter1s = logging.Formatter('{name}/{lineno:0=3}/{levelname:9}{message}', datefmt='%H:%M:%S', style='{')
@@ -34,6 +36,7 @@ fh.setLevel(logging.DEBUG)
 loggerf.addHandler(fh)
 
 # console-logger
+# gggggggg ändring
 loggerc = logging.getLogger(__name__+' console')
 loggerc.setLevel(logging.DEBUG)
 ch = logging.StreamHandler()
